@@ -47,14 +47,14 @@ export function fetchPost(cuid) {
   };
 }
 export function editPost(cuid, post) {
-    return:
-
-    type: 'EDIT_POST',
-    cuid,
-    post
+    return {
+      type: 'EDIT_POST',
+      cuid,
+      post
+    };
 };
 
-export function editPostRequest(cuid,post){
+export function editPostRequest(cuid, post){
   return (dispatch) => {
     return callApi('posts/${cuid}', 'put', {
       post: {
